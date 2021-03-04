@@ -11,7 +11,7 @@
 - https://rtipper-api-server.herokuapp.com/
 
 ## Overview
-
+Dynamic API Phase 3: Add Persistence (Database) to your API
 
 ## Process
 Setup repo
