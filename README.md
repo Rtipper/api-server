@@ -31,26 +31,37 @@ GitHub
 Heroku
 
 ## Change Log
-XX-XX-XX XXPM: 
+03-03-21 1245PM: MongoDB working as well as repo created, cloned and scaffolded out
+03-03-21 930PM: Working on inital codeing including index, server, models, middleware and routes
 
 ## Credits and Collaborations
 
-Number and name of feature: 1 -- Lab XX (XX)
+Number and name of feature: 1 -- Lab 04 (MongoDB Setup + Repo/Heroku + Scaffold)
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: 3 hours
 
-Start time: 
+Start time: 3/3 1130 AM
 
-Finish time: 
+Finish time: 3/3 1245 PM
 
-Actual time needed to complete: 
+Actual time needed to complete: 1 hour 15 min
 
-Number and name of feature: 2 -- Lab XX (XX)
+Number and name of feature: 1 -- Lab 04 (Code!)
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: 5 hours
 
-Start time: 
+Start time: 3/3 630 PM
 
-Finish time: 
+Finish time: 3/3 930 PM
 
-Actual time needed to complete: 
+Actual time needed to complete: N/A - incomplete
+
+Number and name of feature: 1 -- Lab 04 (Finish Code!)
+
+Estimate of time needed to complete: 3 hours
+
+Start time: 3/4
+
+Finish time: 3/4
+
+Actual time needed to complete:
