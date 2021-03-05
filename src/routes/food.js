@@ -2,8 +2,9 @@
 
 const express = require('express');
 
-const Foods = require('../models/food.js');
-const foodItems = new Foods();
+const foodSchema = require('../models/dog.js');
+const Foods = require('../models/data-collection-model.js');
+const foodItems = new Foods(foodSchema);
 
 const foodRouter = express.Router();
 
@@ -15,13 +16,13 @@ foodRouter.put('/foods/:id', updateFood);
 foodRouter.delete('/foods/:id', deleteFood);
 
 function getFood(req, res) {
-  let allFoods = foodItems.get();
+  let allFoods = foodItems.read();
   res.status(200).json(allFoods);
 }
 
 function getOneFood(req, res) {
   let id = parseInt(req.params.id); // does this need to be _id because of mongoDB??
-  let food = foodItems.get(id); // does this need to be _id because of mongoDB??
+  let food = foodItems.read(id); // does this need to be _id because of mongoDB??
   res.status(200).json(food);
 }
 
@@ -34,7 +35,7 @@ function createFood(req, res) {
 
 // UPDATE
 function updateFood(req, res) {
-  let id= parseInt(req.params.id); // does this need to be _id because of mongoDB??
+  let id = parseInt(req.params.id); // does this need to be _id because of mongoDB??
   let content = req.body;
   let updated = foodItems.update(id, content); // does this need to be _id because of mongoDB??
   res.status(200).json(updated);
