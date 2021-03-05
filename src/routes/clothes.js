@@ -2,8 +2,9 @@
 
 const express = require('express');
 
-const Clothes = require('./mdoes/clothes.js');
-const clothesItems = new Clothes();
+const clothesSchema = require('./models/clothes.js');
+const Clothes = require('../models/data-collection-class.js');
+const clothesItems = new Clothes(clothesSchema);
 
 const clothesRouter = express.Router();
 
@@ -15,13 +16,13 @@ clothesRouter.put('/clothes/:id', updateClothes);
 clothesRouter.delete('/clothes/:id', deleteClothes);
 
 function getClothes (req, res) {
-  let allClothes = clothesItems.get();
+  let allClothes = clothesItems.read();
   res.status(200).json(allClothes);
 }
 
 function getOneClothes (req, res) {
   let id = parseInt(re.params.id); // does this need to be _id because of mongoDB??
-  let clothes = clothesItems.get(id);
+  let clothes = clothesItems.read(id);
   res.status(200).json(clothes);
 }
 
@@ -37,6 +38,7 @@ function updateClothes (req, res) {
   let id = parseInt(req.params.id); // does this need to be _id because of mongoDB??
   let content = req.body;
   let updated = clothesItems.update(id, content); // does this need to be _id because of mongoDB??
+  res.status(200).send(updated);
 }
 
 // DELETE
