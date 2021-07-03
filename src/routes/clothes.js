@@ -2,7 +2,7 @@
 
 const express = require('express');
 
-const clothesSchema = require('./models/clothes.js');
+const clothesSchema = require('../models/clothes.js');
 const Clothes = require('../models/data-collection-class.js');
 const clothesItems = new Clothes(clothesSchema);
 

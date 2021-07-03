@@ -2,8 +2,8 @@
 
 const express = require('express');
 
-const foodSchema = require('../models/dog.js');
-const Foods = require('../models/data-collection-model.js');
+const foodSchema = require('../models/food.js');
+const Foods = require('../models/data-collection-class.js');
 const foodItems = new Foods(foodSchema);
 
 const foodRouter = express.Router();
