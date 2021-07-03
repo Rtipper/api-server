@@ -2,7 +2,7 @@
 
 // 3RD PARTY DEPENDENCIES
 const express = require('express');
-const app = (express);
+const app = express();
 
 // INTERNAL MODULES
 const notFound = require('./error-handlers/404.js');
@@ -24,7 +24,7 @@ app.use(foodRoutes);
 app.use(clothesRoutes);
 
 app.use('*', notFound);
-app.use(errors);
+app.use(error);
 
 module.exports = {
   server: app,
